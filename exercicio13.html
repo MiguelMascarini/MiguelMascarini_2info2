@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+
+    <h2>Conversor de Temperatura</h2>
+
+    <input type="text" id="valor"><br><br>
+
+    <button onclick="convertC()">Converter para graus celsius</button>
+    <button onclick="convertF()">Converter para Fahrenheit</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function convertC(){
+            let temp = parseFloat(valor.value);
+
+            if(isNaN(temp)){
+                resultado.innerHTML = "digita uma temperatura válida aí, zé";
+                return;
+            }
+
+            let celsius = ((temp - 32) * 5) / 9;
+            celsius = celsius.toFixed(2);
+
+            resultado.innerHTML = temp + "°F é igual a " + celsius + "°C";
+        }
+
+        function convertF(){
+            let temp = parseFloat(valor.value);
+
+            if(isNaN(temp)){
+                resultado.innerHTML = "digita uma temperatura válida aí, zé";
+                return;
+            }
+
+            let fahrenheit = (temp * 9) / 5 + 32;
+            fahrenheit = fahrenheit.toFixed(2);
+
+            resultado.innerHTML = temp + "°C é igual a " + fahrenheit + "°F";
+        }
+    </script>
+
+</body>
+</html>
