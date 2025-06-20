@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+</head>
+<body>
+
+    <h1>calculadora</h1>
+
+    Número 1: <input type="text" id="num1"><br><br>
+    Número 2: <input type="text" id="num2"><br><br>
+
+    <button onclick="soma()">Soma</button>
+    <button onclick="subtracao()">Subtração</button>
+    <button onclick="multiplicacao()">Multiplicação</button>
+    <button onclick="divisao()">Divisão</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function soma(){
+            let n1 = parseFloat(num1.value);
+            let n2 = parseFloat(num2.value);
+
+            if(isNaN(n1) || isNaN(n2)){
+                resultado.innerHTML = "Digite números válidos";
+                return;
+            }
+
+            let r = n1 + n2;
+            resultado.innerHTML = "Resultado: " + r;
+        }
+
+        function subtracao(){
+            let n1 = parseFloat(num1.value);
+            let n2 = parseFloat(num2.value);
+
+            if(isNaN(n1) || isNaN(n2)){
+                resultado.innerHTML = "Digite números válidos";
+                return;
+            }
+
+            let r = n1 - n2;
+            resultado.innerHTML = "Resultado: " + r;
+        }
+
+        function multiplicacao(){
+            let n1 = parseFloat(num1.value);
+            let n2 = parseFloat(num2.value);
+
+            if(isNaN(n1) || isNaN(n2)){
+                resultado.innerHTML = "Digite números válidos";
+                return;
+            }
+
+            let r = n1 * n2;
+            resultado.innerHTML = "Resultado: " + r;
+        }
+
+        function divisao(){
+            let n1 = parseFloat(num1.value);
+            let n2 = parseFloat(num2.value);
+
+            if(isNaN(n1) || isNaN(n2)){
+                resultado.innerHTML = "Digite números válidos";
+                return;
+            }
+
+            if(n2 === 0){
+                resultado.innerHTML = "divisão com zero é impossível";
+                return;
+            }
+
+            let r = n1 / n2;
+            resultado.innerHTML = "Resultado: " + r;
+        }
+    </script>
+
+</body>
+</html>

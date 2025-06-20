@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+</head>
+<body>
+
+    <h1>adivinhe o número de 1 a 10</h1>
+
+    <p>digite um número:</p>
+    <input type="text" id="chute">
+    <button onclick="verificar()">Chutar</button>
+
+    <p id="mensagem"></p>
+
+    <script>
+        let numsec = Math.floor(Math.random() * 10) + 1;
+
+        function verificar(){
+            let tentativa = parseInt(chute.value);
+
+            if(isNaN(tentativa) || tentativa < 1 || tentativa > 10){
+                mensagem.innerHTML = "Digite um número válido de 1 a 10";
+                return;
+            }
+
+            if(tentativa === numsec){
+                mensagem.innerHTML = "Acertou 👍👍👍";
+            } else {
+                mensagem.innerHTML = "Errou 🤣🤣🤣";
+            }
+        }
+    </script>
+
+</body>
+</html>
+

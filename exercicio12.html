@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Simples</title>
+</head>
+<body>
+
+    <h2>Quantas copas do mundo a seleção brasileira possui?</h2>
+
+    <form>
+        <input type="radio" name="resposta" value="a"> Nenhuma<br><br>
+        <input type="radio" name="resposta" value="b"> 3<br><br>
+        <input type="radio" name="resposta" value="c"> 6<br><br>
+        <input type="radio" name="resposta" value="d"> 5<br><br>
+
+        <button type="button" onclick="verificar()">Responder</button>
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificar(){
+            let alternativas = document.getElementsByName("resposta");
+            let selecionado = "";
+
+            for(let i = 0; i < alternativas.length; i++){
+                if(alternativas[i].checked){
+                    selecionado = alternativas[i].value;
+                }
+            }
+
+            if(selecionado === ""){
+                resultado.innerHTML = "Tem que escolher uma alternativa aí fi"
+            } else if(selecionado === "d"){
+                resultado.innerHTML = "Slk sabe muito! Brasil é penta👍👍👍";
+            } else {
+                resultado.innerHTML = "Errou😔😔😔";
+            }
+        }
+    </script>
+
+</body>
+</html>

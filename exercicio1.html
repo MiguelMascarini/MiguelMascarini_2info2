@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Par ou Ímpar</title>
+</head>
+<body>
+
+    <form name="formulario">
+        Digite um número: 
+        <input type="text" name="numero"><br><br>
+
+        <input type="button" value="Verificar" onclick="verificarParOuImpar()">
+    </form>
+
+    <script>
+        function verificarParOuImpar(){
+            let numero = parseInt(document.formulario.numero.value);
+
+            if(numero % 2 === 0){
+                alert("O número " + numero + " é PAR.");
+            } else {
+                if(numero % 1 === 0){
+                    alert("O número " + numero + " é ÍMPAR.");
+                } else {
+                    alert("Digite um número válido");
+                }
+                
+            }
+        }
+    </script>
+
+</body>
+</html>
