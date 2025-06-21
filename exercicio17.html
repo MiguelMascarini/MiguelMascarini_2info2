@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Matemática</title>
+</head>
+<body>
+
+    <h2>Quiz de Matemática</h2>
+
+    <form id="quiz">
+
+        <p>1) Quanto é 5 + 3?</p>
+        <input type="radio" name="q1" value="a"> 6<br>
+        <input type="radio" name="q1" value="b"> 7<br>
+        <input type="radio" name="q1" value="c"> 8<br>
+        <input type="radio" name="q1" value="d"> 9<br><br>
+
+        <p>2) Quanto é 9 x 2?</p>
+        <input type="radio" name="q2" value="a"> 16<br>
+        <input type="radio" name="q2" value="b"> 18<br>
+        <input type="radio" name="q2" value="c"> 19<br>
+        <input type="radio" name="q2" value="d"> 20<br><br>
+
+        <p>3) Quanto é 15 ÷ 3?</p>
+        <input type="radio" name="q3" value="a"> 4<br>
+        <input type="radio" name="q3" value="b"> 5<br>
+        <input type="radio" name="q3" value="c"> 6<br>
+        <input type="radio" name="q3" value="d"> 7<br><br>
+
+        <button type="button" onclick="verificar()">Verificar</button>
+
+    </form>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificar(){
+            let acertos = 0;
+
+            let q1 = document.querySelector('input[name="q1"]:checked');
+            let q2 = document.querySelector('input[name="q2"]:checked');
+            let q3 = document.querySelector('input[name="q3"]:checked');
+
+            if(!q1 || !q2 || !q3){
+                resultado.innerHTML = "Responda todas as perguntas";
+                return;
+            }
+
+            if(q1.value === "c"){ acertos++; }
+            if(q2.value === "b"){ acertos++; }
+            if(q3.value === "b"){ acertos++; }
+
+            resultado.innerHTML = "você acertou " + acertos + " de 3 perguntas";
+        }
+    </script>
+
+</body>
+</html>

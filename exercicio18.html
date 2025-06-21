@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão que Muda de Cor</title>
+</head>
+<body>
+
+    <button id="btnCor">Não clique</button>
+
+    <script>
+        let botao = document.getElementById("btnCor");
+
+        let cores = ["red", "blue", "green", "yellow", "orange", "purple", "pink", "brown", "gray", "cyan"];
+
+        botao.addEventListener("click", function(){
+
+            let sorteio = Math.floor(Math.random() * cores.length);
+            let corEscolhida = cores[sorteio];
+
+            botao.style.backgroundColor = corEscolhida;
+
+        });
+    </script>
+
+</body>
+</html>
