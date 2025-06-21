@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parágrafo</title>
+</head>
+<body>
+
+    <p id="paragrafo">não clique aqui 2 vezes👎👎👎</p>
+
+    <script>
+        let p = document.getElementById("paragrafo");
+
+        p.addEventListener("dblclick", function(){
+            p.style.display = "none";
+        });
+    </script>
+
+</body>
+</html>

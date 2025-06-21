@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>habilitar botão</title>
+</head>
+<body>
+
+    <input type="checkbox" id="checkPermissao"> habilitar<br><br>
+
+    <button id="btnEnviar" disabled>Enviar</button>
+
+    <script>
+        let checkbox = document.getElementById("checkPermissao");
+        let botao = document.getElementById("btnEnviar");
+
+        checkbox.addEventListener("change", function(){
+            if(checkbox.checked){
+                botao.disabled = false;
+            } else {
+                botao.disabled = true;
+            }
+        });
+    </script>
+
+</body>
+</html>

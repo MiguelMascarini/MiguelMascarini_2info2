@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>última tecla pressionada</title>
+</head>
+<body>
+
+    <h2>Digita aí zé</h2>
+
+    <input type="text" id="inputTec"><br><br>
+
+    última tecla pressionada: <span id="teclap">nenhuma</span>
+
+    <script>
+        let input = document.getElementById("inputTec");
+        let span = document.getElementById("teclap");
+
+        input.addEventListener("keydown", function(e){
+            let tecla = e.key;
+            span.innerHTML = tecla;
+        });
+    </script>
+
+</body>
+</html>
