@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar fundo</title>
+</head>
+<body>
+
+    <input type="radio" name="cor" value="white" onclick="mudarCor('white')"> Branco
+    <input type="radio" name="cor" value="blue" onclick="mudarCor('blue')"> Azul
+    <input type="radio" name="cor" value="green" onclick="mudarCor('green')"> Verde
+    <input type="radio" name="cor" value="red" onclick="mudarCor('red')"> Vermelho
+
+    <script>
+        function mudarCor(cor){
+            document.body.style.backgroundColor = cor;
+        }
+    </script>
+
+</body>
+</html>
